@@ -7,7 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Table Project.</h1>
+    <form onsubmit="dotable(); return false">
+    <input type="number" id="table" placeholder="Enter Your Table Number">
+    <br><br>
+    LINE QUANTITY
+    <br>
+    <input type="number" id="time" placeholder="How Much Table To Write,Enter" value="10" >
+    <button type="submit">click now</button>
+    </form>
+    <h2>Table </h2>
+    <h2 id="result"></h2>
+    <script>
+        function dotable(){
+
+            
+            let firstnumber = +document.querySelector('#table').value;
+            let secondnumber = +document.querySelector('#time').value;
+             let thirdnumber = document.querySelector('#result')
+            thirdnumber.innerHTML="";
+            document.querySelector('#result').innerHTML
+            
+            for (let i = 01 ; i <= secondnumber ; i++) {
+                thirdnumber.innerHTML+=(` ${firstnumber} X ${i} = ${firstnumber*i}  <br>`) ;
+               
+            }}
         
     </script>
 </body>
